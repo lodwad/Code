@@ -1,10 +1,18 @@
 #https://realpython.com/python-command-line-arguments/
 #https://docs.python.org/3/howto/argparse.html
 
+	
 import argparse
-from pyfiglet import Figlet
 
-test = Figlet(font='ANSI Shadow')
+banner= '''
+██╗      ██████╗ ██████╗ ██╗    ██╗ █████╗ ██████╗ 
+██║     ██╔═══██╗██╔══██╗██║    ██║██╔══██╗██╔══██╗
+██║     ██║   ██║██║  ██║██║ █╗ ██║███████║██║  ██║
+██║     ██║   ██║██║  ██║██║███╗██║██╔══██║██║  ██║
+███████╗╚██████╔╝██████╔╝╚███╔███╔╝██║  ██║██████╔╝
+╚══════╝ ╚═════╝ ╚═════╝  ╚══╝╚══╝ ╚═╝  ╚═╝╚═════╝ 
++lodwad                                                  
+'''
 
 
 parser = argparse.ArgumentParser()
@@ -17,7 +25,7 @@ parser.add_argument("-p" , "--proxy" , help="Enter Proxy info: 127.0.0.1")
 args = parser.parse_args()
 
 #banner
-print(test.renderText('lodwad'))
+print(banner)
 
 ##display
 print(args.echo)
@@ -27,3 +35,7 @@ print(args.proxy)
 #if args.proxy:
 #	print 'Proxy Info: ', args.proxy
 
+###build a banner:
+#from pyfiglet import Figlet
+#test = Figlet(font='ANSI Shadow')
+#print(test.renderText('lodwad'))
